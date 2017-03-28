@@ -1,0 +1,39 @@
+.nav-wrapper {
+  background-color: #18573c;
+  color: white;
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+html {
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
+  height: 100%;
+}
+body{
+  height: 100%;
+}
+.main_window{
+  height: 100%;
+}
+.page-footer{
+  background-color:#18573c;
+}
+.left_nav {
+  background-color: #b7decd;
+  color: black;
+  box-shadow: 0px 2px 5px black;
+  word-wrap: break-word;
+  height: 100%;
+}
+.sidebar_title{
+  text-decoration: underline;
+}
+.right_nav {
+  background-color: #b7decd;
+  color: black;
+  box-shadow: 0px 2px 5px black;
+  word-wrap: break-word;
+  height: 100%;
+}
+.middle{
+  color: black;
+  text-align: center;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="css/dashboard_style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Welcome Home, {{user.first_name}}</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">User Profile</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </div>
+    </nav>
+    <div class="main_window row">
+      <div class="left_nav col s12 m4 l2">
+        <div class="container">
+          <h5 class="sidebar_title"> Current Housemates </h5>
+          <ul>
+            <!-- Change for loop to whatever is in context dictionary -->
+            {% for housemate in house %}
+            <li> <a href="#"> {{housemate.first_name}} {{housemate.last_name}} </a> </li>
+            <!-- When you click on a link it should change the message board window to the user profile -->
+            <li> <a href="#"> Harrison Mai </a> </li>
+            <li> <a href="#"> Allen Fang </a> </li>
+            <li> <a href="#"> Alan Le </a> </li>
+            <li> <a href="#"> Sam Moon </a> </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class="middle col s12 m4 l8">
+        <div class="container">
+          <h3> main window </h3>
+        </div>
+      </div>
+
+      <div class="right_nav col s12 m4 l2">
+        <div class="container">
+          <h5 class="sidebar_title"> Transaction History </h5>
+          {% for transaction in transactions %}
+          <ul>
+            <li> {{transaction.transaction}} </li>
+            <li> Harrison charged Alan $500 (PAID) </li>
+            <li> Allen charged Sam $25 (UNPAID) </li>
+          </ul>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+  </body>
+</html>
