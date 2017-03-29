@@ -38,26 +38,35 @@
           </ul>
         </div>
       </div>
-
-      <div class="middle col s12 m4 l8">
-        <div class="container">
-          <h3> main window </h3>
+        <div class="middle col s12 m4 l8">
+          <div class="container">
+            <h3> Messages </h3>
+            <form class="post_message col s12">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">mode_edit</i>
+                  <textarea id="textarea1" class="materialize-textarea"></textarea>
+                  <label for="textarea1"> Post a Message: </label>
+                  <button class="submit_post btn-large waves-effect waves-light"     type="submit" name="action">Submit
+                  <i class="material-icons right">send</i>
+                  </button>
+                </div>
+            </form>
+          </div>
         </div>
-      </div>
-
-      <div class="right_nav col s12 m4 l2">
-        <div class="container">
-          <h5 class="sidebar_title"> Transaction History </h5>
-          {% for transaction in transactions %}
-          <ul>
-            <li> {{transaction.transaction}} </li>
-            <li> Harrison charged Alan $500 (PAID) </li>
-            <li> Allen charged Sam $25 (UNPAID) </li>
-          </ul>
-          {% endfor %}
-        </div>
-      </div>
+          <div class="right_nav col s12 m4 l2">
+            <div class="container">
+              <h5 class="sidebar_title"> Transaction History </h5>
+              {% for transaction in transactions %}
+              <ul>
+                <li> {{transaction.transaction}} </li>
+                <li> Harrison charged Alan $500 (PAID) </li>
+                <li> Allen charged Sam $25 (UNPAID) </li>
+              </ul>
+              {% endfor %}
+            </div>
+          </div>
     </div>
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
   </body>
